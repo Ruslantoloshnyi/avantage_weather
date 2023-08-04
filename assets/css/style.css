@@ -1,0 +1,86 @@
+.weather {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 0;
+  }
+  
+  .weather-widget {
+    background-color: #1ABC9C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .city {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .weather-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .weather-info {
+    margin-bottom: 10px;
+  }
+  
+  .temperature {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #414040;
+  }
+  
+  .feels-like {
+    font-size: 14px;
+    color: #555353;
+  }
+  
+  /* Анимация появления виджета */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .weather-widget {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  /* Анимация волны при наведении */
+@keyframes wave {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .weather-widget:hover {
+    animation: wave 3s ease-in-out infinite;
+  }
+  
